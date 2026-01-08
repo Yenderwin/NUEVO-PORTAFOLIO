@@ -1,0 +1,162 @@
+/* --- VARIABLES --- */
+:root {
+    --dark-blue: #1a1a3d;
+    --text-body: #444444;
+    --bg-top: #f0fbff;
+    --bg-bottom: #ffffff;
+    --pink: #e85d9e;
+    --orange: #fca311;
+    --gray-light: #e0e0e0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Poppins', sans-serif; background-color: #f4f4f4; color: var(--text-body); }
+
+.web-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    min-height: 100vh;
+}
+
+/* --- MARCADORES --- */
+.img-placeholder {
+    background-color: #ddd; border: 2px dashed #999;
+    color: #555; font-weight: bold;
+    display: flex; justify-content: center; align-items: center;
+}
+
+/* --- HEADER (FOTO 1 FONDO) --- */
+.header-section {
+    position: relative;
+    /* Altura suficiente para que se vea la ilustración */
+    min-height: 550px; 
+    padding: 30px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+    /* CONFIGURACIÓN DE LA FOTO 1 */
+    /* Cuando tengas la foto, cambia la url abajo */
+    background-image: url('fotos/fondo1.jpg'); 
+    
+    /* Mientras tanto, esto simula el fondo gris (BÓRRALO AL PONER LA FOTO) */
+    background-color: #dbeeff; 
+
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center right; /* Alinea la parte importante (bote) a la derecha */
+    background-repeat: no-repeat;
+    
+    /* Padding extra abajo para que la tarjeta blanca tape un poco */
+    padding-bottom: 100px; 
+}
+
+/* Etiqueta temporal visual para que sepas que es la foto 1 */
+.bg-label {
+    position: absolute; right: 20px; top: 50%;
+    background: rgba(0,0,0,0.5); color: white; padding: 10px;
+    font-weight: bold; border: 2px dashed white;
+}
+
+.top-bar { margin-bottom: 40px; position: relative; z-index: 2; }
+.brand-name { font-weight: 600; color: var(--dark-blue); font-size: 1.8rem; }
+
+.hero-content-left {
+    max-width: 400px; /* Limita el texto para que no tape el barco */
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 0.9;
+    color: var(--dark-blue);
+    display: flex; flex-direction: column;
+}
+
+.hero-meta {
+    display: flex; justify-content: space-between;
+    width: 250px; margin-top: 15px; font-weight: 600;
+}
+.meta-illus { font-family: 'Playfair Display', serif; font-style: italic; }
+
+
+/* --- CONTENIDO TARJETA --- */
+.content-card {
+    background-color: white;
+    border-radius: 40px 40px 0 0;
+    padding: 50px 8%;
+    position: sticky;
+    top: 40px; /* Se detiene un poco más abajo para dejar ver el header */
+    margin-top: -80px; /* Sube para tapar la parte inferior de la foto */
+    z-index: 2;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.1); /* Sombra para resaltar la superposición */
+}
+
+.section-label { font-family: 'Playfair Display', serif; font-style: italic; color: #999; margin-bottom: 40px; }
+
+/* --- PERFIL (Igual que antes) --- */
+.profile-grid { display: flex; gap: 50px; margin-bottom: 60px; align-items: center; }
+.profile-info { flex: 1; }
+.main-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 4.5rem; line-height: 1; color: var(--dark-blue); }
+.aka-tag { font-weight: 700; margin-bottom: 20px; }
+
+.profile-photo-area { flex: 0 0 350px; text-align: center; }
+.img-profile { width: 320px; height: 320px; border-radius: 50%; margin: 0 auto 20px; background-color: #333; object-fit: cover; }
+.contact-links { display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; font-weight: 600; }
+.c-link { text-decoration: none; color: #000; }
+
+/* --- GRID INFERIOR --- */
+.details-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+.block-title { font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 15px; color: var(--dark-blue); position: relative; }
+.pink-decor { color: var(--pink); }
+.styled-list { list-style: none; font-size: 0.9rem; }
+.styled-list li::before { content: "•"; color: var(--dark-blue); margin-right: 8px; font-weight: bold; }
+
+/* ICONOS */
+.icons-grid { display: flex; flex-wrap: wrap; gap: 15px; }
+.icon-box { width: 60px; height: 60px; border-radius: 12px; object-fit: cover; }
+.p-procreate { background: #222; } .p-id { background: #d90f5d; } .p-ps { background: #001e36; } .p-pr { background: #00005b; } .p-ai { background: #ff9a00; }
+
+/* BARRAS */
+.progress-wrapper { display: flex; flex-direction: column; gap: 15px; justify-content: center; height: 100%; }
+.p-name { font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 4px; }
+.p-track { height: 8px; background: var(--gray-light); border-radius: 4px; overflow: hidden; }
+.p-fill { height: 100%; border-radius: 4px; }
+.dark { background: var(--dark-blue); } .pink { background: var(--pink); } .orange { background: var(--orange); }
+
+/* --- SECCIÓN FINAL (AGRADECIMIENTO) --- */
+.thank-you-section {
+    background-color: var(--dark-blue);
+    color: white;
+    border-radius: 40px 40px 0 0;
+    padding: 80px 20px;
+    text-align: center;
+    position: sticky;
+    top: 80px; /* Se detiene más abajo para dejar ver las hojas anteriores */
+    z-index: 3;
+    min-height: 400px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+}
+.ty-title { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3rem; margin-bottom: 10px; }
+.ty-text { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .profile-grid { flex-direction: column; text-align: center; }
+    .profile-photo-area { order: -1; margin-bottom: 20px;}
+    .details-grid { grid-template-columns: 1fr 1fr; }
+    .column.col-right { grid-column: span 2; }
+    /* Ajuste imagen fondo móvil */
+    .header-section { background-position: center; } 
+}
+
+@media (max-width: 600px) {
+    .details-grid { grid-template-columns: 1fr; }
+    .column.col-right { grid-column: auto; }
+}
